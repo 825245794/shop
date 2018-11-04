@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController
 class HiController {
     @RequestMapping("hi")
     String index(){
-        return 'I am Groovy'
+        return 'I am Groovy！'
     }
 }
