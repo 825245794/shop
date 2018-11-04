@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @EnableAutoConfiguration
 class HiController {
-    @RequestMapping("hi")
+    @RequestMapping("/hi")
     String index(){
         return 'I am Groovy！！！'
     }
