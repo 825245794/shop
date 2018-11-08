@@ -14,9 +14,9 @@
 
 
 
-        var key = CryptoJS.enc.Utf8.parse("539114eee1bffe2a054c4991bed59fd4");
+        var key = CryptoJS.enc.Utf8.parse("efbfbd6cefbfbd7e7a73576059efbfbd125a04efbfbd177d");
 
-        var plaintText = 'TestAES'; // 明文
+        var plaintText = 'TestAES1'; // 明文
 
         var encryptedData = CryptoJS.AES.encrypt(plaintText, key, {
             mode: CryptoJS.mode.ECB,
@@ -41,7 +41,7 @@
         console.log("解密后:"+decryptedStr);
 
 
-        var pwd = "PCsUFtgog9/qpqmqXsuCRQ==";
+        var pwd = "123";
         //加密服务端返回的数据
         var decryptedData = CryptoJS.AES.decrypt(pwd, key, {
             mode: CryptoJS.mode.ECB,

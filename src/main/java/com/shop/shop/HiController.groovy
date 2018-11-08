@@ -34,14 +34,14 @@ class HiController {
     static void AES(){
         //生成Key
         KeyGenerator keyGenerator = KeyGenerator.getInstance("AES")
-        keyGenerator.init(128);
+        keyGenerator.init(128, new SecureRandom('123'.getBytes()));
         //使用上面这种初始化方法可以特定种子来生成密钥，这样加密后的密文是唯一固定的。
         SecretKey secretKey = keyGenerator.generateKey();
         byte[] keyBytes = secretKey.getEncoded();
 
         //Key转换
         Key key = new SecretKeySpec(keyBytes, "AES");
-
+        println 'Key:'+  Hex.toHexString(new String(key.encoded).getBytes())
         //加密
         Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
         cipher.init(Cipher.ENCRYPT_MODE, key);
@@ -49,6 +49,7 @@ class HiController {
         System.out.println("AESencode : " + Hex.toHexString(encodeResult) );
 
         //解密
+//        Key key1 = new SecretKeySpec('539114eee1bffe2a054c4991bed59fd4'?.getBytes(),'AES')
         cipher.init(Cipher.DECRYPT_MODE, key);
         byte[] decodeResult = cipher.doFinal(encodeResult);
         System.out.println("AESdecode : " + new String (decodeResult));
