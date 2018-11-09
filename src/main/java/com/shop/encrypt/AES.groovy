@@ -1,4 +1,4 @@
-package com.shop.shop
+package com.shop.encrypt
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.stereotype.Controller
@@ -25,13 +25,13 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.util.encoders.Hex;
 @Controller
 @EnableAutoConfiguration
-class HiController {
+class AES {
     private static String src = "TestAES";
     @RequestMapping("/login")
     String login(){
         return 'login'
     }
-    static void AES(){
+     AES(){
         //生成Key
         KeyGenerator keyGenerator = KeyGenerator.getInstance("AES")
         keyGenerator.init(128, new SecureRandom('123'.getBytes()));
@@ -56,7 +56,7 @@ class HiController {
 
     }
 
-    static void main(String[] args){
-        AES()
-    }
+//    static void main(String[] args){
+//        AES()
+//    }
 }

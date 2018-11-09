@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>RSA</title>
+</head>
+<body>
+随机生成的公钥为:MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDhMzr7IKndkZsspBd//36IFihM7j9fx4clij//AJq6KeSnX6EAJrc0peQz3bgQo7EkAbJtxVOylybSxMM8+EUR6Ev41+pzvmDeT6PDIQE18cU6NTjIUDF4BScvN76S1O58EhdQX/SiqKQilNFOJU/I4vblDienu73VrR8pat5m3wIDAQAB
+随机生成的私钥为:MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAOEzOvsgqd2RmyykF3//fogWKEzuP1/HhyWKP/8Amrop5KdfoQAmtzSl5DPduBCjsSQBsm3FU7KXJtLEwzz4RRHoS/jX6nO+YN5Po8MhATXxxTo1OMhQMXgFJy83vpLU7nwSF1Bf9KKopCKU0U4lT8ji9uUOJ6e7vdWtHylq3mbfAgMBAAECgYBlg1hk91Za4FXYi6dkNWFuKr7D3umGXUTYcTdj1XvpyxSdNgg3LzyKaPUzRBDCv2cMWg96V+bgrC39+GAhzbAkB9beaiXs0Jik/VaYL4+qGpzxNTiPnAdOf4QhuAZiO0un8JfExz/Du5pkZslFuUMs7tjxWHTIOwLaIZkzf4p54QJBAPSwo31L4kVWASUYmj7Vr/lMrufIMuGPlcTbS4LEEHweX8QeQDXcQ1TRe/1WzzCRRyj5GcdunyXpyqNmv080pfkCQQDrm/jzxdUhKQqOkN2lqvr0RIRrquD9x9WtyjTQ3RiGaZXhlfN9XgA4Dp3qdqBrBa88+2sBnzip+aRdG1lggMmXAkAHay+Zxeo3VfM077kFfK8YLOYEqwI36oWM8WUpss4ZJUacCJrDx0jXUn6i4LXpcA4rRNouPMFggeUd7SiRuzPpAkEAkmMbX+LIFE1aqM+rVzaPq9syZ28JUcSqp8sd27OzfDf4DuxLF9aizjGOvlGsRDKI+ZvAlYZm/30DOXI3qvT5ywJAf9Vzo43t6wzUSR5uAXQK+YkWCo7VTSqTHmCyGGXa97s0bI1qX2zvrmDhhWtA4uQkngH6L1i6AgFMNaGWSn1mcw==
+df723820	加密后的字符串为:l0+n76AVYUb2ukyLtHWCpCenziVfpHwxO9oQ9O4GWPnr612NMsxQtgzFEqg+y9l8f9idBOoytAOiKvRFsFREZeYb20jbgnzFwqz7/KxfSDHc3kc3yqOH3nKC3ROz5bTN77RvdqXd44sln32UhTuYEqw9QQtfSRHNxODXKv52Gcw=
+还原后的字符串为:df723820
+</body>
+<script src="../static/js/jsencrypt.min.js"></script>
+<script type="text/javascript">
+    var encrypt = new JSEncrypt();
+    encrypt.setPublicKey('MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDhMzr7IKndkZsspBd//36IFihM7j9fx4clij//AJq6KeSnX6EAJrc0peQz3bgQo7EkAbJtxVOylybSxMM8+EUR6Ev41+pzvmDeT6PDIQE18cU6NTjIUDF4BScvN76S1O58EhdQX/SiqKQilNFOJU/I4vblDienu73VrR8pat5m3wIDAQAB');
+    var encrypted = encrypt.encrypt('abcc');
+document.write(encrypted)
+</script>
+
+</html>
